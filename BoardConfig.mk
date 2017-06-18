@@ -17,6 +17,8 @@ DEVICE_PATH := device/yu/tomato
 
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
 #Platform
 BOARD_USES_ADRENO := true
 QCOM_HARDWARE_VARIANT := msm8916

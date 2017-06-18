@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,10 +25,14 @@ LOCAL_SRC_FILES := \
     boringssl/cleanup.c \
     boringssl/ctrl.c
 
-LOCAL_CFLAGS += -std=c99
-LOCAL_C_INCLUDES := boringssl
-LOCAL_SHARED_LIBRARIES := libcrypto
-LOCAL_MODULE := libshims_boringssl
+#LOCAL_CFLAGS += -std=c99
+#LOCAL_C_INCLUDES := boringssl
+#LOCAL_SHARED_LIBRARIES := libcrypto
+#LOCAL_MODULE := libshims_boringssl
+LOCAL_SRC_FILES := parcel/parcel.cpp
+
+LOCAL_SHARED_LIBRARIES := libbinder
+LOCAL_MODULE := libshim_parcel
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
@@ -82,5 +86,13 @@ LOCAL_SRC_FILES := ims/MediaBuffer.c
 LOCAL_SHARED_LIBRARIES := libstagefright_foundation
 LOCAL_MODULE := libshims_ims
 LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := boringssl/p_dec.c boringssl/p_open.c boringssl/cipher.c \
+    boringssl/e_des.c boringssl/cleanup.c boringssl/ctrl.c
 
+LOCAL_CFLAGS += -std=c99
+LOCAL_C_INCLUDES := boringssl
+LOCAL_SHARED_LIBRARIES := libcrypto
+LOCAL_MODULE := libshim_boringssl
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
