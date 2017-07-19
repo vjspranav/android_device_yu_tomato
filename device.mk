@@ -51,3 +51,7 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_PACKAGES +=\
 NexusLauncher
+
+PRODUCT_PACKAGES +=\
+MiXplorer
+
