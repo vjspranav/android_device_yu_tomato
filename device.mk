@@ -32,3 +32,7 @@ $(call inherit-product, vendor/yu/tomato/tomato-vendor.mk)
 $(call inherit-product-if-exists, vendor/yu/volte.mk)
 $(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 
+PRODUCT_PACKAGES +=\
+MiXplorer
+
+
