@@ -30,5 +30,4 @@ include $(LOCAL_PATH)/product/*.mk
 $(call inherit-product, vendor/yu/tomato/tomato-vendor.mk)
 $(call inherit-product-if-exists, vendor/volte/volte.mk)
 $(call inherit-product-if-exists, vendor/volte/tomato/tomato-vendor.mk)
-$(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 
