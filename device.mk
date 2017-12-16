@@ -30,7 +30,6 @@ include $(LOCAL_PATH)/product/*.mk
 
 # Call the proprietary setup
 $(call inherit-product, vendor/yu/tomato/tomato-vendor.mk)
-<<<<<<< HEAD
 $(call inherit-product-if-exists, vendor/yu/volte.mk)
 $(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 
@@ -51,9 +50,6 @@ libqdMetaData
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-=======
 
 PRODUCT_PACKAGES +=\
 NexusLauncher
-
->>>>>>> 59006873... Add Pixel2Launcher
