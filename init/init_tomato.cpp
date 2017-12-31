@@ -1,6 +1,5 @@
 /*
    Copyright (c) 2015, The CyanogenMod Project
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -13,7 +12,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -38,9 +36,11 @@
 #include "init_msm8916.h"
 
 using android::base::GetProperty;
+
 using android::init::property_set;
 using android::init::import_kernel_cmdline;
-static int display_density = 230;
+
+static int display_density = 320;
 
 static void import_cmdline(const std::string& key,
         const std::string& value, bool for_emulator __attribute__((unused)))
@@ -48,7 +48,7 @@ static void import_cmdline(const std::string& key,
     if (key.empty()) return;
 
     if (key == "panel.xres" && value == "1080") {
-        display_density = 410;
+        display_density = 480;
     }
 }
 
@@ -58,7 +58,7 @@ void init_target_properties()
     import_kernel_cmdline(0, import_cmdline);
     snprintf(density, sizeof(density), "%d", display_density);
     property_set("ro.sf.lcd_density", density);
-    if (display_density == 410) {
+    if (display_density == 480) {
         property_set("ro.product.model", "YU5510");
         property_set("dalvik.vm.heapstartsize", "16m");
         property_set("dalvik.vm.heapgrowthlimit", "192m");
