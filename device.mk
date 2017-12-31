@@ -34,6 +34,7 @@ $(call inherit-product-if-exists, vendor/yu/volte.mk)
 $(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 
 PRODUCT_PACKAGES +=\
+<<<<<<< HEAD
 MiXplorer \
 MusicPlayer \
 NexusLauncher
@@ -54,3 +55,7 @@ libhealthd.cm
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0
+=======
+MiXplorer
+
+>>>>>>> parent of 04ef765... Add MusicPlayer

@@ -27,6 +27,7 @@ LOCAL_MODULE_SUFFIX := .apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
+<<<<<<< HEAD
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := MusicPlayer
@@ -47,3 +48,5 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3
 include $(BUILD_PREBUILT)
 
+=======
+>>>>>>> parent of 04ef765... Add MusicPlayer

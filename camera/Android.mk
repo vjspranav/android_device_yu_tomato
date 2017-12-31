@@ -11,5 +11,10 @@ ifeq ($(call is-board-platform-in-list,$(MM_V4L2_DRIVER_LIST)),true)
     ifneq ($(BUILD_TINY_ANDROID),true)
       include $(call all-subdir-makefiles)
     endif
+
+LOCAL_HEADER_LIBRARIES += \
+    libnativebase_headers
+
+
 endif
 endif
