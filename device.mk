@@ -36,3 +36,14 @@ $(call inherit-product-if-exists, vendor/yu/tomato/tomato-vendor.mk)
 # HIDL
 PRODUCT_PACKAGES += \
 android.hidl.base@1.0
+
+TARGET_ARCH := arm64
+TARGET_DENSITY := xxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+
+
+# Cam 
+PRODUCT_PACKAGES += \
+libqdMetaData
