@@ -55,3 +55,5 @@ NexusLauncher
 PRODUCT_PACKAGES +=\
 MiXplorer
 
+PRODUCT_PACKAGES +=\
+Browser
