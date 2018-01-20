@@ -68,6 +68,9 @@
 
     <!-- Enable Custom Button Brightness 
     <bool name="config_deviceHasVariableButtonBrightness">true</bool> -->
+  
+    <!-- Enable Button Brightness 
+    <bool name="config_button_brightness_support">true</bool> -->
 
     <!-- Base "touch slop" value used by ViewConfiguration as a
          movement threshold where scrolling should begin. -->
@@ -87,4 +90,8 @@
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
+
+<!-- <bool name="config_button_brightness_support">false</bool>
+ <integer name="config_button_brightness_default">128</integer> -->
+
 </resources>
