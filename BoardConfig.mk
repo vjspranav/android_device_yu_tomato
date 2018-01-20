@@ -24,4 +24,4 @@ TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
 include vendor/yu/tomato/BoardConfigVendor.mk
 
 # Allow missing dependencies
- ALLOW_MISSING_DEPENDENCIES=true
+# ALLOW_MISSING_DEPENDENCIES=true
