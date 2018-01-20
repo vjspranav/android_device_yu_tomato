@@ -1,2 +1,3 @@
-#Doze
-PRODUCT_PACKAGES +=\ YuDoze
+# Doze mode
+ PRODUCT_PACKAGES += \
+     YUDoze
