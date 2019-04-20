@@ -82,8 +82,7 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
 # Wi-Fi
 TARGET_PROVIDES_WCNSS_QMI := true
-WIFI_DRIVER_MODULE_NAME := "wlan"
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
+TARGET_QCOM_WLAN_VARIANT := wlan-caf
 
 # Inherit from proprietary files
 include vendor/yu/tomato/BoardConfigVendor.mk
