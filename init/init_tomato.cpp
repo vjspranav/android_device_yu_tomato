@@ -30,13 +30,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "vendor_init.h"
-#include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include <android-base/properties.h>
 
+#include "property_service.h"
+#include "vendor_init.h"
+#include "util.h"
 #include "init_msm8916.h"
 
+using android::base::GetProperty;
+using android::init::property_set;
+using android::init::import_kernel_cmdline;
 static int display_density = 320;
 
 static void import_cmdline(const std::string& key,
@@ -51,12 +54,6 @@ static void import_cmdline(const std::string& key,
 
 void init_target_properties()
 {
-    std::string device;
-
-    device = property_get("ro.cm.device");
-    if (device != "tomato")
-        return;
-
     char density[5];
     import_kernel_cmdline(0, import_cmdline);
     snprintf(density, sizeof(density), "%d", display_density);
