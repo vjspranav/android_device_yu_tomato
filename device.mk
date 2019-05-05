@@ -117,7 +117,6 @@ PRODUCT_PACKAGES += \
 
 #Apps
 PRODUCT_PACKAGES +=\
-NexusLauncher \
 MiXplorer \
 Markup
 
