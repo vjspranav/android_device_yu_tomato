@@ -117,9 +117,9 @@ PRODUCT_PACKAGES += \
 
 #Apps
 PRODUCT_PACKAGES +=\
-PixelLauncher \
+NexusLauncher \
 MiXplorer \
-MarkupGoogle
+Markup
 
 PRODUCT_PACKAGES += \
 android.hardware.graphics.composer@2.1-impl
