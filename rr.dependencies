@@ -18,5 +18,12 @@
     "repository":  "gohilnikhil/device_cyanogen_msm8916-common",
     "target_path": "device/cyanogen/msm8916-common",
     "branch":      "pie"
+  },
+
+ {
+    "remote": "github",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "lineage-16.0"
   }
 ]
