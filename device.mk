@@ -50,12 +50,12 @@ TARGET_SCREEN_WIDTH := 720
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8916 \
+#    camera.msm8916 \
     libmm-qcamera \
     Snap
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl 
+    android.hardware.camera.provider@2.4-impl
 
 # Due to multi-density builds, these are set by init
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model ro.sf.lcd_density

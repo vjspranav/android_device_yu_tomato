@@ -41,7 +41,7 @@ on boot
     chown root system /sys/class/timed_output/vibrator/vtg_level
     chmod 0660 /sys/class/timed_output/vibrator/vtg_level
 
-service_redefine config_bt_addr /system/bin/btnvtool -b /system/bin/yl_btmac
+service config_bt_addr /system/bin/btnvtool -b /system/bin/yl_btmac
     class core
     user bluetooth
     group bluetooth radio
