@@ -1,2 +1,0 @@
-add_lunch_combo stag_tomato-userdebug
-add_lunch_combo stag_tomato-eng
