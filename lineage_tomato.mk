@@ -14,12 +14,12 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-$(call inherit-product, vendor/stag/main.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := stag_tomato
+PRODUCT_NAME := lineage_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 PRODUCT_MODEL := AO5510

@@ -21,6 +21,7 @@ $(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 ALLOW_MISSING_DEPENDENCIES=true
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -53,7 +54,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@3.2-impl \
-    camera.msm8916 \
+#    camera.msm8916 \
     libmm-qcamera \
     SnapdragonCamera \
     FootejCamera
@@ -152,9 +153,9 @@ libhealthd.cm
 
 # Shims
 #PRODUCT_PACKAGES += \
- #   libshims_boringssl \
- #   libshims_camera \
- #   libshims_ims
+   libshims_boringssl \
+   libshims_camera \
+   libshims_ims
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -210,17 +211,27 @@ PRODUCT_COPY_FILES += \
 
 #Shims
 #TARGET_LD_SHIM_LIBS += \
- #      /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
- #      /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
- #      /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
+      /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+      /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
+      /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
 
 #Camera Sounds
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camsounds/camera_click.ogg:system/product/media/audio/ui \
-    $(LOCAL_PATH)/camsounds/camera_focus.ogg:system/product/media/audio/ui \
-    $(LOCAL_PATH)/camsounds/VideoStop.ogg:system/product/media/audio/ui \
-    $(LOCAL_PATH)/camsounds/VideoRecord.ogg:system/product/media/audio/ui
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/camsounds/camera_click.ogg:system/product/media/audio/ui \
+#    $(LOCAL_PATH)/camsounds/camera_focus.ogg:system/product/media/audio/ui \
+#    $(LOCAL_PATH)/camsounds/VideoStop.ogg:system/product/media/audio/ui \
+#    $(LOCAL_PATH)/camsounds/VideoRecord.ogg:system/product/media/audio/ui
 
 # YUDoze
-PRODUCT_PACKAGES += \
-    YUDoze
+#PRODUCT_PACKAGES += \
+#    YUDoze
+
+#SystemServer: Bootimg dex
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+
+
+
+
