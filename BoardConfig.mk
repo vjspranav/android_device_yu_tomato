@@ -139,8 +139,7 @@ endif
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy_tmp
 
 TARGET_FS_CONFIG_GEN += \
-    $(VENDOR_PATH)/fs_config/file_caps.fs \
-    $(VENDOR_PATH)/fs_config/mot_aids.fs
+    $(LOCAL_PATH)/fs_config/file_caps.fs \
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
