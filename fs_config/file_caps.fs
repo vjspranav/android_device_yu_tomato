@@ -14,6 +14,12 @@
 # limitations under the License.
 
 
+[system/bin/pm-service]
+user: AID_SYSTEM
+group: AID_SYSTEM
+mode: 0755
+caps: NET_BIND_SERVICE
+
 [firmware/]
 mode: 0771
 user: AID_SYSTEM
