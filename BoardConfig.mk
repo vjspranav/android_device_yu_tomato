@@ -81,6 +81,7 @@ TARGET_LIBINIT_MSM8916_DEFINES_FILE := device/yu/tomato/init/init_tomato.cpp
 BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
+BOARD_KERNEL_CMDLINE += loop.max_part=7
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_CONFIG := lineageos_tomato_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
